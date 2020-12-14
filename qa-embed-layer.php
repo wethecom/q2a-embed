@@ -48,11 +48,15 @@
 				'youtube'=>array(
 					array(
 						'https{0,1}:\/\/w{0,3}\.*youtube\.com\/watch\?\S*v=([A-Za-z0-9_-]+)[^< ]*',
-						'<iframe width="'.$w.'" height="'.$h.'" src="http://www.youtube.com/embed/$1?wmode=transparent" frameborder="0" allowfullscreen></iframe>'
+						//'<iframe width="'.$w.'" height="'.$h.'" src="https://www.youtube.com/embed/$1?wmode=transparent" frameborder="0" allowfullscreen></iframe>'
+						'<div style="width: '.$w.'; height: '.$h.'; float: none; clear: both; margin: 2px auto;"> <embed
+						src="https://www.youtube.com/embed/$1?autohide=1&autoplay=1" wmode="transparent" type="video/mp4" width="100%" height="100%" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen title=""></div>'
 					),
 					array(
 						'https{0,1}:\/\/w{0,3}\.*youtu\.be\/([A-Za-z0-9_-]+)[^< ]*',
-						'<iframe width="'.$w.'" height="'.$h.'" src="http://www.youtube.com/embed/$1?wmode=transparent" frameborder="0" allowfullscreen></iframe>'
+					//	'<iframe width="'.$w.'" height="'.$h.'" src="https://www.youtube.com/embed/$1?wmode=transparent" frameborder="0" allowfullscreen></iframe>'
+						'<div style="width: '.$w.'; height: '.$h.'; float: none; clear: both; margin: 2px auto;"> <embed
+						src="https://www.youtube.com/embed/$1?autohide=1&autoplay=1" wmode="transparent" type="video/mp4" width="100%" height="100%" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen title=""></div>'
 					)
 				),
 				'vimeo'=>array(
